@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=S, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crystal Collector Game</title>
 
@@ -12,10 +12,33 @@ img {
     width: 50px;
     height: 50px;
 }
+
+div.instructions {
+
+    color: green;
+    background-color: bisque;
+    width: 350px;
+}
+body {
+    background-image: url("https://cdn10.bigcommerce.com/s-vw57mn/products/44212/images/137934/Geometric-Background-Honey-Bee-Stencils-652827599238_image1__76819.1542319607.1280.1280.jpg?c=2:");
+
+}
+
+h1 {
+    color: white;
+    background-color: orange;
+    width: 300px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
     </style>
 
 </head>
 <body>
+       
 
 <h1>CrystalsCollector!</h1>
 
@@ -49,7 +72,7 @@ img {
     </div>
 
     <div class="click-score">
-            <p class="points"></p>
+            <p class="points">0</p>
     </div>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -74,6 +97,19 @@ $("img.crystal3").text(crys3Val);
 //generates a random number for crystal 4
 var crys4Val = Math.floor(Math.random()*12+1)
 $("img.crystal4").text(crys4Val);
+
+//when crystal 1 is clicked, add value to user total score
+//when crystal 2 is clicked, add value to user total score
+//when crystal 3 is clicked, add value to user total score
+//when crystal 4 is clicked, add value to  total score
+
+//when user score surpasses random score generated, increase loss count
+//when user score surpasses random score generated, update result message
+//when user score surpasses random score generated, reset the random score, crystal values, and user guess total score
+
+//when user score matches random score generated, increase win count
+//when user score matches random score generated, update result message
+//when user score surpasses random score generated, reset the random score, crystal values, and user guess total score
 
 </script>
     
