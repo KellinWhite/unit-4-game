@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=S, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crystal Collector Game</title>
+</head>
+<body>
+
+<h1>CrystalsCollector!</h1>
+
+    <div class="instructions">
+        <p>You will be given a random number at the start of the game.</p>
+        <p>There are four crystals below.  By clicking on a crystal you will add a specific amount of points to your total score.</p>
+        <p>You will win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+        <p>The value of each crystal is hidden from you until you click on it.</p>
+        <p>Each time when the game starts, the game will change the values of each crystal.</p>
+    </div>
+
+    <div class="random-number">
+        <p class="randNum"></p>
+    </div>
+
+    <div class="win-count">
+        <p>Result: <span id="result"></span></p>
+        <p>Wins: <span id="wins"></span></p>
+        <p>Losses: <span id="losses"></span></p>
+    </div>
+
+    <div class="images">
+        <img>
+        <img>
+        <img>
+        <img>
+    </div>
+
+    <div>
+        <p>Your total score is: <span id="total-score"></span></p>
+    </div>
+
+    <div class="click-score">
+            <p class="points"></p>
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+var randNum = Math.floor(Math.random()*100)
+
+$("p.randNum").text(randNum);
+
+</script>
+    
+</body>
+</html>
