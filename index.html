@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=S, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crystal Collector Game</title>
+
+    <style type="text/css">
+img {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+    </style>
+
 </head>
 <body>
 
@@ -29,10 +38,10 @@
     </div>
 
     <div class="images">
-        <img>
-        <img>
-        <img>
-        <img>
+        <img class="crystal1" src="https://sgcisanfrancisco.org/images/crystal-clipart-electric-blue-5.jpg" alt="blue crystal" crystal-value="">
+        <img class="crystal2" src="https://www.seekclipart.com/clipng/middle/88-882638_crystal-clipart-yellow-gem-steven-universe-gemcrust-gemstones.png" alt="yellow crystal" crystal-value="">
+        <img class="crystal3" src="https://www.seekclipart.com/clipng/middle/14-144940_crystal-gem-clip-art-red-gem-clip-art.png" alt="red crystal">
+        <img class="crystal4" src="https://www.seekclipart.com/clipng/middle/389-3892709_gem-png-rectangle-clipart.png" alt="green crystal">
     </div>
 
     <div>
@@ -46,9 +55,25 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
 <script type="text/javascript">
-var randNum = Math.floor(Math.random()*100)
-
+//generates a random number to be added to the page at when it initially loads
+var randNum = Math.floor(Math.random()*101 + 19);
 $("p.randNum").text(randNum);
+
+//generates a random number for crystal 1
+var crys1Val = Math.floor(Math.random()*12+1)
+$("img.crystal1").text(crys1Val);
+
+//generates a random number for crystal 2
+var crys2Val = Math.floor(Math.random()*12+1)
+$("img.crystal2").text(crys2Val);
+
+//generates a random number for crystal 3
+var crys3Val = Math.floor(Math.random()*12+1)
+$("img.crystal3").text(crys3Val);
+
+//generates a random number for crystal 4
+var crys4Val = Math.floor(Math.random()*12+1)
+$("img.crystal4").text(crys4Val);
 
 </script>
     
