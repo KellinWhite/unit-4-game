@@ -56,8 +56,8 @@ h1 {
 
     <div class="win-count">
         <p>Result: <span id="result"></span></p>
-        <p>Wins: <span id="wins"></span></p>
-        <p>Losses: <span id="losses"></span></p>
+        <p>Wins: <span id="wins">0</span></p>
+        <p>Losses: <span id="losses">0</span></p>
     </div>
 
     <div class="images">
@@ -78,8 +78,9 @@ h1 {
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
 <script type="text/javascript">
-var tot = "";
-crys1Val="";
+var tot = 0;
+var results = 0;
+
 
 //generates a random number to be added to the page at when it initially loads
 var randNum = Math.floor(Math.random()*101 + 19);
@@ -106,24 +107,52 @@ $("img.crystal4").text(crys4Val);
 $('img.crystal1').on('click', function add1(){
 tot = parseInt(crys1Val+tot);
 $('p.points').text(tot);
+if (tot == randNum){
+    alert("you've won");
+};
+if (tot > randNum){
+    alert("you've lost");
+};
 });
 //when crystal 2 is clicked, add value to user total score
 $('img.crystal2').on('click', function add2(){
 tot = parseInt(crys2Val+tot);
 $('p.points').text(tot);
+if (tot == randNum){
+    alert("you've won");
+};
+if (tot > randNum){
+    alert("you've lost");
+}
 });
 
 //when crystal 3 is clicked, add value to user total score
 $('img.crystal3').on('click', function add3(){
 tot = parseInt(crys3Val+tot);
 $('p.points').text(tot);
+if (tot == randNum){
+    alert("you've won");
+};
+if (tot > randNum){
+    alert("you've lost");
+}
 });
+
 //when crystal 4 is clicked, add value to  total score
 $('img.crystal4').on('click', function add4(){
 tot = parseInt(crys4Val+tot);
 $('p.points').text(tot);
+if (tot == randNum){
+    alert("you've won");
+};
+if (tot > randNum){
+    alert("you've lost");
+}
 });
+
 //when user score surpasses random score generated, increase loss count
+
+
 
 //when user score surpasses random score generated, update result message
 //when user score surpasses random score generated, reset the random score, crystal values, and user guess total score
