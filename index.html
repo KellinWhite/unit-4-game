@@ -55,9 +55,9 @@ h1 {
     </div>
 
     <div class="win-count">
-        <p>Result: <span id="result"></span></p>
-        <p>Wins: <span id="wins">0</span></p>
-        <p>Losses: <span id="losses">0</span></p>
+        <p class="results1">Result: <span class="result"></span></p>
+        <p>Wins: <span class="win-total">0</span></p>
+        <p>Losses: <span class="loss-total">0</span></p>
     </div>
 
     <div class="images">
@@ -79,8 +79,8 @@ h1 {
 
 <script type="text/javascript">
 var tot = 0;
-var results = 0;
-
+var wins = 0
+var losses = 0;
 
 //generates a random number to be added to the page at when it initially loads
 var randNum = Math.floor(Math.random()*101 + 19);
@@ -108,10 +108,38 @@ $('img.crystal1').on('click', function add1(){
 tot = parseInt(crys1Val+tot);
 $('p.points').text(tot);
 if (tot == randNum){
-    alert("you've won");
+    $('span.result').text("you've won");
+    wins = (wins + 1);
+    $('span.win-total').text(wins);
+    randNum = Math.floor(Math.random()*101 + 19);
+    $("p.randNum").text(randNum);
+    tot = 0;
+    $('p.points').text(tot);
+    crys1Val = Math.floor(Math.random()*12+1)
+$("img.crystal1").text(crys1Val);
+crys2Val = Math.floor(Math.random()*12+1)
+$("img.crystal2").text(crys2Val);
+crys3Val = Math.floor(Math.random()*12+1)
+$("img.crystal3").text(crys3Val);
+crys4Val = Math.floor(Math.random()*12+1)
+$("img.crystal4").text(crys4Val);
 };
 if (tot > randNum){
-    alert("you've lost");
+    $('span.result').text("you've lost");
+    losses = (losses + 1);
+    $('span.loss-total').text(losses);
+    randNum = Math.floor(Math.random()*101 + 19);
+    $("p.randNum").text(randNum);
+    tot = 0;
+    $('p.points').text(tot);
+    crys1Val = Math.floor(Math.random()*12+1)
+$("img.crystal1").text(crys1Val);
+crys2Val = Math.floor(Math.random()*12+1)
+$("img.crystal2").text(crys2Val);
+crys3Val = Math.floor(Math.random()*12+1)
+$("img.crystal3").text(crys3Val);
+crys4Val = Math.floor(Math.random()*12+1)
+$("img.crystal4").text(crys4Val);
 };
 });
 //when crystal 2 is clicked, add value to user total score
@@ -119,11 +147,39 @@ $('img.crystal2').on('click', function add2(){
 tot = parseInt(crys2Val+tot);
 $('p.points').text(tot);
 if (tot == randNum){
-    alert("you've won");
+    $('span.result').text("you've won");
+    wins = (wins + 1);
+    $('span.win-total').text(wins);
+    randNum = Math.floor(Math.random()*101 + 19);
+    $("p.randNum").text(randNum);
+    tot = 0;
+    $('p.points').text(tot);
+    crys1Val = Math.floor(Math.random()*12+1)
+$("img.crystal1").text(crys1Val);
+crys2Val = Math.floor(Math.random()*12+1)
+$("img.crystal2").text(crys2Val);
+crys3Val = Math.floor(Math.random()*12+1)
+$("img.crystal3").text(crys3Val);
+crys4Val = Math.floor(Math.random()*12+1)
+$("img.crystal4").text(crys4Val);
 };
 if (tot > randNum){
-    alert("you've lost");
-}
+    $('span.result').text("you've lost");
+    losses = (losses + 1);
+    $('span.loss-total').text(losses);
+    randNum = Math.floor(Math.random()*101 + 19);
+    $("p.randNum").text(randNum);
+    tot = 0;
+    $('p.points').text(tot);
+    crys1Val = Math.floor(Math.random()*12+1)
+$("img.crystal1").text(crys1Val);
+crys2Val = Math.floor(Math.random()*12+1)
+$("img.crystal2").text(crys2Val);
+crys3Val = Math.floor(Math.random()*12+1)
+$("img.crystal3").text(crys3Val);
+crys4Val = Math.floor(Math.random()*12+1)
+$("img.crystal4").text(crys4Val);
+};
 });
 
 //when crystal 3 is clicked, add value to user total score
@@ -131,11 +187,37 @@ $('img.crystal3').on('click', function add3(){
 tot = parseInt(crys3Val+tot);
 $('p.points').text(tot);
 if (tot == randNum){
-    alert("you've won");
+    $('span.result').text("you've won");
+    wins = (wins + 1);
+    $('span.win-total').text(wins);
+    randNum = Math.floor(Math.random()*101 + 19);
+    $("p.randNum").text(randNum);
+    crys1Val = Math.floor(Math.random()*12+1)
+$("img.crystal1").text(crys1Val);
+crys2Val = Math.floor(Math.random()*12+1)
+$("img.crystal2").text(crys2Val);
+crys3Val = Math.floor(Math.random()*12+1)
+$("img.crystal3").text(crys3Val);
+crys4Val = Math.floor(Math.random()*12+1)
+$("img.crystal4").text(crys4Val);
 };
 if (tot > randNum){
-    alert("you've lost");
-}
+    $('span.result').text("you've lost");
+    losses = (losses + 1);
+    $('span.loss-total').text(losses);
+    randNum = Math.floor(Math.random()*101 + 19);
+    $("p.randNum").text(randNum);
+    tot = 0;
+    $('p.points').text(tot);
+    crys1Val = Math.floor(Math.random()*12+1)
+$("img.crystal1").text(crys1Val);
+crys2Val = Math.floor(Math.random()*12+1)
+$("img.crystal2").text(crys2Val);
+crys3Val = Math.floor(Math.random()*12+1)
+$("img.crystal3").text(crys3Val);
+crys4Val = Math.floor(Math.random()*12+1)
+$("img.crystal4").text(crys4Val);
+};
 });
 
 //when crystal 4 is clicked, add value to  total score
@@ -143,11 +225,39 @@ $('img.crystal4').on('click', function add4(){
 tot = parseInt(crys4Val+tot);
 $('p.points').text(tot);
 if (tot == randNum){
-    alert("you've won");
+    $('span.result').text("you've won");
+    wins = (wins + 1);
+    $('span.win-total').text(wins);
+    randNum = Math.floor(Math.random()*101 + 19);
+    $("p.randNum").text(randNum);
+    tot = 0;
+    $('p.points').text(tot);
+    crys1Val = Math.floor(Math.random()*12+1)
+$("img.crystal1").text(crys1Val);
+crys2Val = Math.floor(Math.random()*12+1)
+$("img.crystal2").text(crys2Val);
+crys3Val = Math.floor(Math.random()*12+1)
+$("img.crystal3").text(crys3Val);
+crys4Val = Math.floor(Math.random()*12+1)
+$("img.crystal4").text(crys4Val);
 };
 if (tot > randNum){
-    alert("you've lost");
-}
+    $('span.result').text("you've lost");
+    losses = (losses + 1);
+    $('span.loss-total').text(losses);
+    randNum = Math.floor(Math.random()*101 + 19);
+    $("p.randNum").text(randNum);
+    tot = 0;
+    $('p.points').text(tot);
+    crys1Val = Math.floor(Math.random()*12+1)
+$("img.crystal1").text(crys1Val);
+crys2Val = Math.floor(Math.random()*12+1)
+$("img.crystal2").text(crys2Val);
+crys3Val = Math.floor(Math.random()*12+1)
+$("img.crystal3").text(crys3Val);
+crys4Val = Math.floor(Math.random()*12+1)
+$("img.crystal4").text(crys4Val);
+};
 });
 
 //when user score surpasses random score generated, increase loss count
