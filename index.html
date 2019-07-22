@@ -61,10 +61,10 @@ h1 {
     </div>
 
     <div class="images">
-        <img class="crystal1" src="https://sgcisanfrancisco.org/images/crystal-clipart-electric-blue-5.jpg" alt="blue crystal" crystal-value="">
+        <img class="crystal1" src="https://sgcisanfrancisco.org/images/crystal-clipart-electric-blue-5.jpg" alt="blue crystal" data-type="number">
         <img class="crystal2" src="https://www.seekclipart.com/clipng/middle/88-882638_crystal-clipart-yellow-gem-steven-universe-gemcrust-gemstones.png" alt="yellow crystal" crystal-value="">
-        <img class="crystal3" src="https://www.seekclipart.com/clipng/middle/14-144940_crystal-gem-clip-art-red-gem-clip-art.png" alt="red crystal">
-        <img class="crystal4" src="https://www.seekclipart.com/clipng/middle/389-3892709_gem-png-rectangle-clipart.png" alt="green crystal">
+        <img class="crystal3" src="https://www.seekclipart.com/clipng/middle/14-144940_crystal-gem-clip-art-red-gem-clip-art.png" alt="red crystal" crystal-value="">
+        <img class="crystal4" src="https://www.seekclipart.com/clipng/middle/389-3892709_gem-png-rectangle-clipart.png" alt="green crystal" crystal-value="">
     </div>
 
     <div>
@@ -78,6 +78,9 @@ h1 {
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
 <script type="text/javascript">
+var tot = "";
+crys1Val="";
+
 //generates a random number to be added to the page at when it initially loads
 var randNum = Math.floor(Math.random()*101 + 19);
 $("p.randNum").text(randNum);
@@ -99,11 +102,29 @@ var crys4Val = Math.floor(Math.random()*12+1)
 $("img.crystal4").text(crys4Val);
 
 //when crystal 1 is clicked, add value to user total score
-//when crystal 2 is clicked, add value to user total score
-//when crystal 3 is clicked, add value to user total score
-//when crystal 4 is clicked, add value to  total score
 
+$('img.crystal1').on('click', function add1(){
+tot = parseInt(crys1Val+tot);
+$('p.points').text(tot);
+});
+//when crystal 2 is clicked, add value to user total score
+$('img.crystal2').on('click', function add2(){
+tot = parseInt(crys2Val+tot);
+$('p.points').text(tot);
+});
+
+//when crystal 3 is clicked, add value to user total score
+$('img.crystal3').on('click', function add3(){
+tot = parseInt(crys3Val+tot);
+$('p.points').text(tot);
+});
+//when crystal 4 is clicked, add value to  total score
+$('img.crystal4').on('click', function add4(){
+tot = parseInt(crys4Val+tot);
+$('p.points').text(tot);
+});
 //when user score surpasses random score generated, increase loss count
+
 //when user score surpasses random score generated, update result message
 //when user score surpasses random score generated, reset the random score, crystal values, and user guess total score
 
