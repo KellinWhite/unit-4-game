@@ -13,7 +13,7 @@ img {
     height: 50px;
 }
 
-div.instructions {
+section.instructions {
 
     color: green;
     background-color: bisque;
@@ -34,47 +34,95 @@ h1 {
     justify-content: center;
 }
 
+div.box1 {
+    display: inline-block;
+}
+
+p.randNum {
+    background-color: lightgreen;
+    text-align: left;
+    height: 100px;
+    width: 150px;
+    font-size: 25px;
+    display: inline-block;
+    margin: 0px;
+
+}
+
+aside.win-count {
+    background-color: turquoise;
+    text-align: left;
+    height: 100px;
+    width: 125px;
+    margin: 10px;
+}
+
+p.points {
+    color: white;
+    background-color: lightseagreen;
+    height: 100px;
+    width: 150px;
+    font-size: 25px;
+    display: inline-block;
+    margin: 10px;
+    border: 15px;
+
+}
+
+p.totscore {
+    color: white;
+    background-color: lightseagreen;
+    text-align: left;
+    height: 30px;
+    width: 150px;
+    font-size: 15px;
+    display: inline-block;
+    margin: 0px; 
+}
+
     </style>
 
 </head>
 <body>
        
+<div class="entireSection">
+    <h1>
+        CrystalsCollector!
+    </h1>
 
-<h1>CrystalsCollector!</h1>
-
-    <div class="instructions">
+    <section class="instructions">
         <p>You will be given a random number at the start of the game.</p>
         <p>There are four crystals below.  By clicking on a crystal you will add a specific amount of points to your total score.</p>
         <p>You will win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
         <p>The value of each crystal is hidden from you until you click on it.</p>
         <p>Each time when the game starts, the game will change the values of each crystal.</p>
-    </div>
+    </section>
 
-    <div class="random-number">
+
+       
         <p class="randNum"></p>
-    </div>
+     
 
-    <div class="win-count">
-        <p class="results1">Result: <span class="result"></span></p>
-        <p>Wins: <span class="win-total">0</span></p>
-        <p>Losses: <span class="loss-total">0</span></p>
-    </div>
+        <aside class="win-count">
+            <p class="results1">Result: <span class="result"></span></p>
+            <p>Wins: <span class="win-total">0</span></p>
+            <p>Losses: <span class="loss-total">0</span></p>
+        </aside>
 
-    <div class="images">
+
+    <section class="images">
         <img class="crystal1" src="https://sgcisanfrancisco.org/images/crystal-clipart-electric-blue-5.jpg" alt="blue crystal" data-type="number">
         <img class="crystal2" src="https://www.seekclipart.com/clipng/middle/88-882638_crystal-clipart-yellow-gem-steven-universe-gemcrust-gemstones.png" alt="yellow crystal" crystal-value="">
         <img class="crystal3" src="https://www.seekclipart.com/clipng/middle/14-144940_crystal-gem-clip-art-red-gem-clip-art.png" alt="red crystal" crystal-value="">
         <img class="crystal4" src="https://www.seekclipart.com/clipng/middle/389-3892709_gem-png-rectangle-clipart.png" alt="green crystal" crystal-value="">
-    </div>
-
-    <div>
-        <p>Your total score is: <span id="total-score"></span></p>
-    </div>
-
-    <div class="click-score">
-            <p class="points">0</p>
-    </div>
-
+    </section>
+    <section>
+        <p class="totscore">Your total score is: <span id="total-score"></span></p>
+    </section>
+    <section>
+        <p class="points">0</p>
+    </section>
+</div>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
 <script type="text/javascript">
